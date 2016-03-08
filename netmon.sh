@@ -1,7 +1,7 @@
 #! /bin/bash
 total_old=0
 
-#Bash is float agnostic so net_max is multiplied by 100 in order to get percentage
+#Bash is float agnostic so net_max is divided by 100 in order to get percentage
 #I hacked the use of bc further on, still need to refactor the code a bit
 net_max=125000
 for n in {1..6000};do clear;echo NetMonitor V0.1;echo;tx=($(cat /sys/class/net/eth0/statistics/tx_bytes));\
